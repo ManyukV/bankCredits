@@ -18,38 +18,38 @@
             <th>Название</th>
             <th>Ставка (%)</th>
             <th>Срок (лет)</th>
-            <th></th>
+            <th class="empty"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Щедрый взнос</td>
-            <td>3.5%</td>
-            <td>5</td>
+            <td data-title="Название">Щедрый взнос</td>
+            <td data-rate="Ставка">3.5%</td>
+            <td data-term="Срок">5</td>
             <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
-            <td>Отпуск не за горами</td>
-            <td>4.0%</td>
-            <td>10</td>
+            <td data-title="Название">Отпуск не за горами</td>
+            <td data-rate="Ставка">4.0%</td>
+            <td data-term="Срок">10</td>
             <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
-            <td>Учеба в удовольствие</td>
-            <td>4.5%</td>
-            <td>15</td>
+            <td data-title="Название">Учеба в удовольствие</td>
+            <td data-rate="Ставка">4.5%</td>
+            <td data-term="Срок">15</td>
             <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
-            <td>Милый дом</td>
-            <td>5.0%</td>
-            <td>20</td>
+            <td data-title="Название">Милый дом</td>
+            <td data-rate="Ставка">5.0%</td>
+            <td data-term="Срок">20</td>
             <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
-            <td>Жизнь без границ</td>
-            <td>5.5%</td>
-            <td>25</td>
+            <td data-title="Название">Жизнь без границ</td>
+            <td data-rate="Ставка">5.5%</td>
+            <td data-term="Срок">25</td>
             <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
         </tbody>
@@ -63,10 +63,10 @@
                 <form>
                     <label for="name">Имя</label>
                     <input type="text" id="name" name="name" required>
-                    <label for="contact">Номер телефона</label>
-                    <input type="text" id="number" name="number">
+                    <label for="number">Номер телефона</label>
+                    <input type="text" id="number" name="number" required>
                     <div class="form-btn">
-                        <button class="apply-btn" type="sunmit">Оформить заявку</button>
+                        <button class="apply-btn" type="submit">Оформить заявку</button>
                     </div>
                 </form>
             </div>

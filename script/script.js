@@ -1,6 +1,7 @@
 const modal = document.querySelector("#modal"),
   modalTriggres = document.querySelectorAll("[data-open]"),
   modalClose = document.querySelector("[data-close]");
+let selectedCredit = {}
 
 modalTriggres.forEach((btn) => {
   btn.addEventListener("click", openModal);
