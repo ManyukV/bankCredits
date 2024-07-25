@@ -26,34 +26,53 @@
             <td>Щедрый взнос</td>
             <td>3.5%</td>
             <td>5</td>
-            <td><button class="apply-btn">Оформить заявку</button></td>
+            <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
             <td>Отпуск не за горами</td>
             <td>4.0%</td>
             <td>10</td>
-            <td><button class="apply-btn">Оформить заявку</button></td>
+            <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
             <td>Учеба в удовольствие</td>
             <td>4.5%</td>
             <td>15</td>
-            <td><button class="apply-btn">Оформить заявку</button></td>
+            <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
             <td>Милый дом</td>
             <td>5.0%</td>
             <td>20</td>
-            <td><button class="apply-btn">Оформить заявку</button></td>
+            <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
           <tr>
             <td>Жизнь без границ</td>
             <td>5.5%</td>
             <td>25</td>
-            <td><button class="apply-btn">Оформить заявку</button></td>
+            <td><button data-open class="apply-btn">Оформить заявку</button></td>
           </tr>
         </tbody>
       </table>
+
+      <div id="modal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <span class="close" data-close>&times;</span>
+                <h2>Оставьте заяку и мы свяжемся с вами</h2>
+                <form>
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="contact">Номер телефона</label>
+                    <input type="text" id="number" name="number">
+                    <div class="form-btn">
+                        <button class="apply-btn" type="sunmit">Оформить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+
     <script src="./script/script.js"></script>
   </body>
 </html>
