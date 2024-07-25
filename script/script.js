@@ -1,7 +1,8 @@
 const modal = document.querySelector("#modal"),
   modalTriggres = document.querySelectorAll("[data-open]"),
-  modalClose = document.querySelector("[data-close]");
-let selectedCredit = {}
+  modalClose = document.querySelector("[data-close]"),
+  form = document.querySelector("[data-form]");
+let selectedCredit = {};
 
 modalTriggres.forEach((btn) => {
   btn.addEventListener("click", openModal);
@@ -24,9 +25,15 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// функция открытия модального окна
+// функция открытия модального окна и получения данных о кредите
 
-function openModal() {
+function openModal(event) {
+  const row = event.target.closest("tr");
+  selectedCredit = {
+    title: row.querySelector("[data-title]").textContent,
+    rate: row.querySelector("[data-rate]").textContent,
+    term: row.querySelector("[data-term]").textContent,
+  };
   modal.classList.remove("hide");
   modal.classList.add("show");
   document.body.style.overflow = "hidden";
@@ -39,3 +46,11 @@ function closeModal() {
   modal.classList.add("hide");
   document.body.style.overflow = "";
 }
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log("Данные о кредите:", selectedCredit);
+  form.reset();
+  modal.classList.add("hide");
+  modal.classList.remove("show");
+});
