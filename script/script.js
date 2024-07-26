@@ -50,6 +50,15 @@ function closeModal() {
 //функция обработки формы
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    const phoneInput = document.getElementById('number');
+    const phonePattern = /^\+?[0-9\s\-]{10,15}$/;
+  
+    if (!phonePattern.test(phoneInput.value)) {
+      alert('Пожалуйста, введите корректный номер телефона.');
+      return;
+    }
+
     console.log('Данные о кредите:', selectedCredit);
     const formData = new FormData(form);
 
