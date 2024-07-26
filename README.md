@@ -25,7 +25,7 @@
 
 ## Инструкции по запуску проекта
 
-### 1. Клонирование репозитория
+### Клонирование репозитория
 Сначала клонируйте репозиторий на ваш локальный компьютер:
 ```bash
 git clone [https://github.com/yourusername/yourrepository.git](https://github.com/ManyukV/bankCredits.git)
