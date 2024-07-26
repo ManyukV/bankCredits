@@ -55,7 +55,7 @@
         </tbody>
       </table>
 
-      <div id="modal" class="modal hide">
+      <!-- <div id="modal" class="modal hide">
         <div class="modal-dialog">
             <div class="modal-content">
                 <span class="close" data-close>&times;</span>
@@ -71,6 +71,29 @@
                     </div>
                 </form>
             </div>
+        </div>
+      </div> -->
+
+      <div id="modal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Оставьте заяку и мы свяжемся с вами</h3>
+              <span class="close" data-close>&times;</span>
+            </div>
+            <div class="modal-body">    
+              <form data-form>
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
+                <label for="number">Номер телефона</label>
+                <input type="text" id="number" name="number" required>
+                <input type="hidden" id="creditDetails" name="creditDetails">
+                <div class="form-btn">
+                    <button class="apply-btn" type="submit">Оформить заявку</button>
+                </div>
+            </form>
+            </div>
+          </div>
         </div>
       </div>
 

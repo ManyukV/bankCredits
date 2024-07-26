@@ -47,10 +47,26 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  console.log("Данные о кредите:", selectedCredit);
-  form.reset();
-  modal.classList.add("hide");
-  modal.classList.remove("show");
-});
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log('Данные о кредите:', selectedCredit);
+    const formData = new FormData(form);
+
+    fetch('index.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data.status === 'success') {
+        form.reset();
+        modal.classList.add('hide');
+        modal.classList.remove('show');
+      } else {
+        alert('Ошибка отправки заявки');
+      }
+    })
+    .catch(error => console.error('Ошибка:', error));
+  });
