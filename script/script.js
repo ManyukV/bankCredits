@@ -47,7 +47,7 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-
+//функция обработки формы
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log('Данные о кредите:', selectedCredit);
